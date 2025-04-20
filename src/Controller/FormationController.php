@@ -11,8 +11,10 @@ final class FormationController extends AbstractController
     #[Route('/formation', name: 'app_formation')]
     public function index(): Response
     {
+        $tab1=[12,986,24,78];
         return $this->render('formation/index.html.twig', [
-            'controller_name' => 'FormationController',
+            'tab1'=>$tab1
         ]);
     }
+   
 }
