@@ -3,4 +3,36 @@ bonjour {{nom}}
 <br>
 <h2>First Element of tab1:</h2>
 
-<p>{{ tab1[0] }}</p>
+{{ tab1[0] }}
+<br>
+{% set x = 'moteur template twig' %}
+{{x|upper}}
+<br>
+{{x|title}}
+<br>
+{{x|length}}
+<br>
+{{nom~''~x}}
+<br>
+<h1>Ajourd'hui :{{"now"| date("d/m/y")}}</h1>
+
+<ul>
+{% for key,value in tab2 %}
+    <li>{{key~' : '~value}}</li>
+{% endfor %}
+</ul>
+<table border='1'>
+    <tr>
+        <th>Firstname</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    {% for i in tab3 %}
+        
+    <tr>
+        <td> {{i.firstname}}</td>
+        <td> {{i.name}}</td>
+        <td> {{i.age}}</td>
+    </tr>
+    {% endfor %}
+</table>

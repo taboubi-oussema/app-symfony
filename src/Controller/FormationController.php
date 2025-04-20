@@ -12,8 +12,16 @@ final class FormationController extends AbstractController
     public function index(): Response
     {
         $tab1=[12,986,24,78];
+        $tab2=['mohamed'=>'Symfony','meriem'=>'android','agmed'=>'Flutter'];
+        $tab3=[
+            ['firstname'=>'mohamed','name'=>'ben mohamed','age'=>'20'],
+            ['firstname'=>'mohamed','name'=>'ben mohamed','age'=>'20'],
+            ['firstname'=>'mohamed','name'=>'ben mohamed','age'=>'20']
+        ];
         return $this->render('formation/index.html.twig', [
-            'tab1'=>$tab1
+            'tab1'=>$tab1,
+            'tab2'=>$tab2,
+            'tab3'=>$tab3
         ]);
     }
    
