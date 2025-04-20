@@ -24,5 +24,15 @@ final class FormationController extends AbstractController
             'tab3'=>$tab3
         ]);
     }
+    #[Route('/tab/{nb?5}',name:'note.formation')]
+    public function note($nb):Response{
+        $tabnote=[];
+        for ($i=0; $i <$nb ; $i++) { 
+            $tabnote[]=rand(0,20);
+        }
+        return $this->render('formation/note.html.twig',[
+            'tabnote'=>$tabnote
+        ]);
+    }
    
 }
